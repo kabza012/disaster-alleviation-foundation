@@ -1,0 +1,26 @@
+﻿@page
+@model disaster_alleviation_foundation.Pages.AllocateMoneyModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(Pages => Pages.Amount)*@
+              
+
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        Money allocated successfully to a disaster.
+        
+    </tbody>
+</table>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+        }

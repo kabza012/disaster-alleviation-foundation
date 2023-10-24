@@ -1,0 +1,40 @@
+﻿@page "Disaster"
+@model disaster_alleviation_foundation.Pages.DisasterModel
+@{
+}
+
+
+
+<h1>Create a New Disaster</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Disasters.DisasterId">DisasterId:</label>
+        <input type="number" class="form-control" id="number" name="DisasterId" required />
+    </div>
+    <div class="form-group">
+        <label for="Disasters.StartDate">Start Date:</label>
+        <input type="date" class="form-control" id="StartDate" name="StartDate" required />
+    </div>
+    <div class="form-group">
+        <label for="Disasters.EndDate">End Date:</label>
+        <input type="date" class="form-control" id="EndDate" name="EndDate" required />
+    </div>
+    <div class="form-group">
+        <label for="Disasters.Location">Location:</label>
+        <input type="text" class="form-control" id="Location" name="Location" required />
+    </div>
+    <div class="form-group">
+        <label for="Disasters.Description">Description:</label>
+        <textarea class="form-control" id="Description" name="Description" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

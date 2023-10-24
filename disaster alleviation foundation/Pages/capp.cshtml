@@ -1,0 +1,36 @@
+﻿@page
+@model disaster_alleviation_foundation.Pages.CapturePurchaseModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.capture[0].goods)
+                @Html.DisplayNameFor(Model => Model.capture[0].amount)
+
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.capture)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.goods)
+                    @Html.DisplayFor(modelItem => item.amount)
+
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<p>The amount decreases</p>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+        }

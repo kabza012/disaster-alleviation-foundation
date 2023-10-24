@@ -1,0 +1,40 @@
+﻿@page
+@model disaster_alleviation_foundation.Pages.DisasterModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.disaster[0].DisasterId)
+                @Html.DisplayNameFor(Model => Model.disaster[0].StartDate)
+                @Html.DisplayNameFor(Model => Model.disaster[0].EndDate)
+                @Html.DisplayNameFor(Model => Model.disaster[0].Location)
+                @Html.DisplayNameFor(Model => Model.disaster[0].Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.disaster)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisasterId)
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                    @Html.DisplayFor(modelItem => item.Location)
+                    @Html.DisplayFor(modelItem => item.Description)
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+        }

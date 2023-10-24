@@ -1,0 +1,33 @@
+﻿@page
+@model disaster_alleviation_foundation.Pages.donationsModel
+@{
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.donation[100].DonationDate)
+                @Html.DisplayNameFor(Model => Model.donation[100].Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.donation)
+        {
+                <tr>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.DonationDate)
+                    @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+
+                </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+        }
